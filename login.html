@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - ReFind</title>
+
+    <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+
+<header class="auth-navbar">
+    <a href="index.html" class="brand">
+        Re<span>Find</span>
+    </a>
+
+    <a href="index.html" class="back-home">
+        ← Back to Home
+    </a>
+</header>
+
+<main class="auth-wrapper">
+
+    <section class="auth-card">
+
+        <div class="auth-icon">🔐</div>
+
+        <h1>Welcome Back!</h1>
+
+        <p class="auth-subtitle">
+            Login to your ReFind account
+        </p>
+
+        <form id="loginForm">
+
+            <label for="loginEmail">Email Address</label>
+
+            <input
+                type="email"
+                id="loginEmail"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label for="loginPassword">Password</label>
+
+            <div class="password-box">
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <button
+                    type="button"
+                    class="toggle-password"
+                    data-target="loginPassword"
+                >
+                    Show
+                </button>
+
+            </div>
+
+            <button type="submit" class="auth-submit">
+                Login
+            </button>
+
+            <p id="loginMessage" class="message"></p>
+
+        </form>
+
+        <div class="auth-switch">
+            Don't have an account?
+            <a href="registration.html">Create Account</a>
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="auth-footer">
+    © 2026 ReFind - Lost & Found Application
+</footer>
+
+<script src="auth.js"></script>
+
+</body>
+</html>
+
+<a href="registration.html">Create Account</a>

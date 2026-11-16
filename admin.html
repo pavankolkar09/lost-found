@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ReFind Admin Dashboard</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <h2>Re<span>Find</span></h2>
+
+        <p class="admin-label">ADMIN PANEL</p>
+
+        <nav>
+            <a href="admin.html" class="active">Dashboard</a>
+            <a href="#reports">Manage Reports</a>
+            <a href="index.html">Home Page</a>
+        </nav>
+
+        <button id="logoutBtn" class="logout">
+            Logout
+        </button>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Dashboard Overview</h1>
+                <p>Welcome to ReFind Administration</p>
+            </div>
+
+            <span class="admin-profile">Admin</span>
+        </header>
+
+
+        <!-- STATISTICS -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>📦</span>
+                <h3>Total Reports</h3>
+                <h2 id="totalItems">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>🔴</span>
+                <h3>Lost Items</h3>
+                <h2 id="lostItems">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>🟢</span>
+                <h3>Found Items</h3>
+                <h2 id="foundItems">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>👥</span>
+                <h3>Registered Users</h3>
+                <h2 id="totalUsers">0</h2>
+            </div>
+
+        </section>
+
+
+        <!-- REPORTS -->
+
+        <section class="reports" id="reports">
+
+            <div class="section-heading">
+                <h2>Recent Item Reports</h2>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search items..."
+                >
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Category</th>
+                            <th>Type</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="reportTable">
+                    </tbody>
+
+                </table>
+
+                <p id="emptyMessage">
+                    No item reports available.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="admin.js"></script>
+
+</body>
+</html>

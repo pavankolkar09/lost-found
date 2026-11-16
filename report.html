@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReFind | Report an Item</title>
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">Re<span>Find</span></a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="admin.html" class="admin-only" hidden>Dashboard</a>
+        <a href="report.html">Report Item</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <section class="intro">
+        <h1>Help Reunite Lost Belongings</h1>
+        <p>Report a lost or found item and help someone find what matters.</p>
+    </section>
+
+    <section class="report-card">
+
+        <h2>Submit an Item Report</h2>
+
+        <div class="type-selection">
+            <button type="button" class="type-btn selected" data-type="Lost">
+                🔴 Report Lost Item
+            </button>
+
+            <button type="button" class="type-btn" data-type="Found">
+                🟢 Report Found Item
+            </button>
+        </div>
+
+        <form id="reportForm">
+
+            <input type="hidden" id="itemType" value="Lost">
+
+            <label for="itemName">Item Name *</label>
+            <input
+                type="text"
+                id="itemName"
+                placeholder="Example: Black wallet"
+                required
+            >
+
+            <label for="category">Category *</label>
+            <select id="category" required>
+                <option value="">Select category</option>
+                <option>Electronics</option>
+                <option>Wallet / Purse</option>
+                <option>Documents</option>
+                <option>Keys</option>
+                <option>Bags</option>
+                <option>Clothing</option>
+                <option>Jewellery</option>
+                <option>Books</option>
+                <option>Other</option>
+            </select>
+
+            <label for="location">Location *</label>
+            <input
+                type="text"
+                id="location"
+                placeholder="Where was it lost or found?"
+                required
+            >
+
+            <label for="itemDate">Date *</label>
+            <input type="date" id="itemDate" required>
+
+            <label for="description">Item Description *</label>
+            <textarea
+                id="description"
+                placeholder="Describe the item, colour, brand, identifying features..."
+                rows="4"
+                required
+            ></textarea>
+
+            <label for="contactName">Your Name *</label>
+            <input
+                type="text"
+                id="contactName"
+                placeholder="Enter your name"
+                required
+            >
+
+            <label for="contactEmail">Contact Email *</label>
+            <input
+                type="email"
+                id="contactEmail"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label for="contactPhone">Phone Number (Optional)</label>
+            <input
+                type="tel"
+                id="contactPhone"
+                placeholder="Enter phone number"
+            >
+
+            <label for="itemImage">Upload Item Photo</label>
+            <input
+                type="file"
+                id="itemImage"
+                accept="image/png,image/jpeg,image/webp"
+            >
+
+            <div class="preview-container">
+                <img id="imagePreview" alt="Item photo preview">
+                <p id="previewText">Your image preview will appear here.</p>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Submit Report
+            </button>
+
+            <p id="formMessage" role="status"></p>
+
+        </form>
+
+    </section>
+
+    <section class="my-reports">
+        <h2>Recently Submitted Reports</h2>
+        <div id="myReports" class="report-list"></div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 ReFind | Lost and Found Application</p>
+</footer>
+
+<script src="common.js"></script>
+<script src="report.js"></script>
+
+</body>
+</html>

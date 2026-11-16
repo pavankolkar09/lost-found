@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ReFind - Lost & Found Application</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <a href="index.html" class="logo">
+        Re<span>Find</span>
+    </a>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#items">Browse Items</a>
+        <a href="report.html">Report Item</a>
+    </nav>
+
+    <div class="nav-buttons">
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="register.html" class="register-btn">Register</a>
+    </div>
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span class="tagline">WELCOME TO REFIND</span>
+
+        <h1>
+            Lost Something?<br>
+            <span>Let's Find It Together.</span>
+        </h1>
+
+        <p>
+            A simple platform to report lost belongings
+            and reconnect found items with their owners.
+        </p>
+
+        <div class="hero-search">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search mobile, wallet, ID card..."
+            >
+
+            <button onclick="searchItems()">
+                Search
+            </button>
+        </div>
+
+        <a href="report.html" class="hero-link">
+            Report an Item →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURES -->
+<section class="features">
+
+    <div class="feature">
+        <div class="feature-icon">🔍</div>
+        <h3>Report Lost Items</h3>
+        <p>Report belongings you have lost.</p>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">📦</div>
+        <h3>Report Found Items</h3>
+        <p>Help someone recover their belongings.</p>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">🤝</div>
+        <h3>Reconnect</h3>
+        <p>Bring lost belongings back to their owners.</p>
+    </div>
+
+</section>
+
+
+<!-- ITEMS SECTION -->
+<section class="items-section" id="items">
+
+    <div class="section-heading">
+        <span>COMMUNITY ITEMS</span>
+        <h2>Recently Reported Items</h2>
+        <p>Explore items reported by your community.</p>
+    </div>
+
+    <div class="filter-buttons">
+
+        <button class="filter-btn active"
+            onclick="filterItems('All', this)">
+            All Items
+        </button>
+
+        <button class="filter-btn"
+            onclick="filterItems('Lost', this)">
+            Lost Items
+        </button>
+
+        <button class="filter-btn"
+            onclick="filterItems('Found', this)">
+            Found Items
+        </button>
+
+    </div>
+
+    <div class="items-grid" id="itemsGrid"></div>
+
+</section>
+
+
+<!-- REPORT CALL TO ACTION -->
+<section class="cta-report" id="report">
+    <span>HELP YOUR COMMUNITY</span>
+    <h2>Have You Lost or Found Something?</h2>
+    <p>
+        Your report can help reconnect belongings
+        with their owners.
+    </p>
+    <a href="report.html" class="cta-btn">Report an Item</a>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-grid">
+
+        <div class="footer-brand">
+            <h2>Re<span>Find</span></h2>
+            <p>Helping communities reconnect with lost belongings.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="#items">Browse Items</a>
+            <a href="report.html">Report Lost/Found</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Account</h4>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="admin.html" class="admin-only" hidden>Admin Dashboard</a>
+        </div>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 ReFind. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script src="common.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
